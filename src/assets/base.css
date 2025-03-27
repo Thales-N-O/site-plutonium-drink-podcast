@@ -1,0 +1,15 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+--gradientFistBackground:rgb(252, 231, 243);
+--gradientSecondBackground:rgb(220, 232, 252);
+}
+
+/* semantic color variables for this project */
+:root {
+
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+  }
+}

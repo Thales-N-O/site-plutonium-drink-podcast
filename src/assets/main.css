@@ -1,0 +1,13 @@
+@import './base.css';
+html{
+  background:linear-gradient(
+    var(--gradientFistBackground),
+    var(--gradientSecondBackground)
+    );
+  background-repeat: no-repeat;
+  height: 100%;
+  
+}
+header{
+  display: flex;
+}
