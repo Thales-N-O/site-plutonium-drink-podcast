@@ -1,7 +1,18 @@
 /* color palette from <https://github.com/vuejs/theme> */
 :root {
---gradientFistBackground:rgb(252, 231, 243);
---gradientSecondBackground:rgb(220, 232, 252);
+--gradient-Fist-Background:rgb(252, 231, 243);
+--gradient-Second-Background:rgb(220, 232, 252);
+
+
+--header-First-Background:rgb(171, 85, 245);
+--header-Second-Background:rgb(233, 72, 153);
+--header-Third-Background:rgb(234, 177, 8);
+
+--standard-First-Background: rgb(192, 132, 252);
+--standard-Second-Background:rgb(76, 223, 130);
+
+--footer-First-Background:rgb(145, 48, 231);
+--footer-Second-Background:rgb(217, 39, 119);
 }
 
 /* semantic color variables for this project */
@@ -13,3 +24,36 @@
   :root {
   }
 }
+*{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+margin: 0;
+border: 0;
+padding: 0;
+}
+/* CLASSES DEPENDENTES DE:> DISPLAY GRIDS */
+body,header,main,footer{
+  display: grid;
+text-align: center;
+justify-content: center;
+place-items: center;
+}
+/* CLASSES DEPENDENTES DE:>WODTH100% */
+body,html,footer{
+  width: 100%;
+  
+  }
+  /* CLASSES DEPENDENTES DE:>HEIGHT100% */
+  body,html{
+    height: 100%;
+  
+  }
+  /* CLASSES DEPENDENTES DE:>BUTTON HOVER SIMPLES */
+  
+  button:hover{
+    background-color: lightgray;
+  }
+  /* IDS AND CLASSES THAT NEEDS:>DISPLAY GRID*/
+  .latestEpisodes,#recently_released,#tapaburaco{
+    display: grid;
+    align-items: center
+  }

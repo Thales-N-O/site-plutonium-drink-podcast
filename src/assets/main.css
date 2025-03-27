@@ -1,13 +1,69 @@
 @import './base.css';
 html{
   background:linear-gradient(
-    var(--gradientFistBackground),
-    var(--gradientSecondBackground)
+    var(--gradient-Fist-Background),
+    var(--gradient-Second-Background)
     );
-  background-repeat: no-repeat;
-  height: 100%;
+}
+body{
+  display: grid;
+  align-items:center;
+  justify-content: center;
+}
+
+
+
+
+header{
+  background: linear-gradient(
+  90deg, 
+  var(--header-First-Background),
+  var(--header-Second-Background),
+  var(--header-Third-Background));
+    
+  grid-template-columns: 1fr 1fr 1fr; /* 3 colunas */
+  grid-template-rows: auto auto auto auto; /* 4 linhas */
+  grid-template-areas: 
+  ". clage ."
+  ". title ."
+  ". paragraph ."
+  ". play singup"
+  ;
+  gap: 10px;
+  &>.starTitle{
+    display: flex;
+    text-align: center;
+  }
+}
+
+#standard{
+
+}
+#tapaburaco{
   
 }
-header{
-  display: flex;
+#recently_released{
+
+}
+footer{
+  background: linear-gradient(
+    to left,
+    var(--footer-First-Background),
+    var(--footer-Second-Background)
+  );
+  
+}
+.astestEpisodes{
+  width: 12em;
+  height: 16em;
+background: linear-gradient(
+270deg,
+var(--standard-First-Background) 0%,
+var(--standard-Second-Background) );
+
+padding-top: 1em;
+border-radius: 5%;
+background-size: 100% 8px;
+background-repeat: no-repeat;
+background-color: white;
 }
