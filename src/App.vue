@@ -4,7 +4,6 @@
 <clientHeadOver/>
 <clientBodyOver/>
 <clientFooterOver/>
-
 </template>
 
 <script setup>

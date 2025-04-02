@@ -13,6 +13,27 @@
 
 --footer-First-Background:rgb(145, 48, 231);
 --footer-Second-Background:rgb(217, 39, 119);
+
+
+--button-Green-Color:rgba(77, 222, 77, 0.929);
+--button-Light-Green-Color-Hover:rgba(64, 194, 64, 0.929);
+--button-Translucid-White-Color:rgba(255, 255, 255, .3);
+--button-Translucid-Black-Color:rgba(0, 0, 0, 0.563);
+--hover-Translucid-Violet-Color:rgba(147, 112, 216, 0.542);
+--shadow-Card-Box:rgba(58, 58, 58, 0.109);
+
+/* FONTES DE TEXTOS E TITULOS */
+--fonte-Titulo:Inter;
+--fonte-Paragrafo:Rubik;
+
+--roxo-Anchor:rgb(137, 11, 232);
+--Time-Gray-Marker:rgb(144, 149, 160);
+--amarelo-Botão-Mostarda:rgb(247, 190, 8);
+--amarelo-Linha-Borda:rgb(254, 239, 129);
+--amarelo-Fundo-Claro:rgb(254, 252, 232);
+
+--side-Top-Color:rgb(226, 203, 229);
+--side-Bottom-Color:rgb(228, 150, 192);
 }
 
 /* semantic color variables for this project */
@@ -20,22 +41,47 @@
 
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-  }
-}
 *{
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  /* overflow-x: ; */
+  transition:ease-out .2s ;
+  font-family: var(--fonte-Paragrafo);
 margin: 0;
 border: 0;
 padding: 0;
 }
+.debug{
+  border: black 2px dashed;
+}
+/* 100% WIDTH */
+header,footer,main{
+  width: 90% !important;
+}
+/* 33% width */
+.associedDc,.episode,.lastestEpisodes{
+  width: 33%;
+}
+/* MARGIN 5% */
+header,footer,#recently_released,#standard,#showBefore{
+  margin-top: 3%;
+}
+/* HEAD E FOOTE COLOR WHITE */
+header,footer{
+  color: white;
+}
 /* CLASSES DEPENDENTES DE:> DISPLAY GRIDS */
-body,header,main,footer{
+#app,body,header,main,footer,.latestEpisodes,.episode,.associedDc{
   display: grid;
 text-align: center;
 justify-content: center;
 place-items: center;
+}
+/* NECESSITADOS DO:> DISPLAY FLEX */
+nav>button:nth-of-type(1),nav>button:nth-of-type(2),.starTitle,.epCount,.itcMin,section{
+  display: flex;
+  align-content: center;
+  place-items: center;
+  align-items: center;
+  justify-content: center;
 }
 /* CLASSES DEPENDENTES DE:>WODTH100% */
 body,html,footer{
@@ -47,13 +93,32 @@ body,html,footer{
     height: 100%;
   
   }
-  /* CLASSES DEPENDENTES DE:>BUTTON HOVER SIMPLES */
-  
-  button:hover{
-    background-color: lightgray;
+
+
+/* RADIUS PADRÃO */
+  nav>button:nth-of-type(1),nav>button:nth-of-type(2),.lastestEpisodes,.associedDc,footer,.cards{
+    border-radius: .5em;
   }
+
+
+    /* CLASSES DEPENDENTES DE:>BUTTON CURSOR E HOVER SIMPLES */
+
+    button:hover{
+      cursor: pointer;
+    }
   /* IDS AND CLASSES THAT NEEDS:>DISPLAY GRID*/
-  .latestEpisodes,#recently_released,#tapaburaco{
-    display: grid;
-    align-items: center
+
+
+  /* TeSD */
+  .epCount,.itcMin>{
+    padding: 1em 1em .5em 1em;
+    box-sizing: border-box;
+  }
+  
+  @media (width<=500px) {}
+  #app{
+    box-sizing: content-box;
+   
+
+
   }
