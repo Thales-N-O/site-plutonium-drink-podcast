@@ -1,6 +1,6 @@
 <template>
-<footer class="debug">
-    <menu class="debug">
+<footer >
+    <menu >
 <p id="merchandizer"><span>Não perca nenhum episódio!</span>
 <br>Assine nosso podcast em sua plataforma favorita e receba notificações quando<br> lançarmos novos episódios.</p>
 <div id="cards" >
@@ -10,9 +10,9 @@
 </div>
     </menu>
 
-<div id="classific" class="debug">
+<div id="classific" >
 
-    <div><div><div><h1  class="debug">16+</h1></div></div></div>
+    <div><div><div><h1  >16+</h1></div></div></div>
 
 </div>
 </footer>
@@ -49,33 +49,44 @@ footer{
     &:hover{background: var(--button-Translucid-Black-Color); color: white; }
       }
       #classific {
+        border-radius: none !important;
+    place-items: center;
     height: 16vh;
     width: 55%;
+    border: dashed royalblue 2px;
 
     & > div {
-        height: 75%;
-        width: 75%;
-        background-color: aliceblue;
+        height: 12vh;
+        width: 8vw;
+        background-color: royalblue;
 
         & > div {
-            height: 60%;
-            width: 60%;
+            height: 50%;
+            width: 6vw;
             background-color: blue;
 
             & > div {
                 height: 50%;
-                width: 50%;
+                width: 4vw;
                 background-color: black;
 
                 & > h1 {
-                    font-size: 2em;
+                    width: 2vw;
+                    font-size: 100%;
                     background: red;
                 }
             }
         }
     }
 }
-
+#classific,#classific>div,#classific>div>div,#classific>div>div>div,#classific>div>div>div>h1{
+    display: flex;
+    padding: .7em 0em   .5em 1.5em;
+    flex-direction: column-reverse;
+    border-radius: 50%;
+    place-items: center;
+    
+}
           /*text-align: center;
             background-color: purple;
             border-radius: 50%;
@@ -100,6 +111,27 @@ gap: 10%;
  }
     }   
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (width<=1145px){
     footer{
         width: 80% !important;
