@@ -6,14 +6,24 @@ html{
     );
     background-attachment: fixed;
     height: fit-content;
+    border: dashed green 2px;
 }
 body{
   display: grid;
   align-items:center;
   justify-content: center;
+  border: dashed blue 2px;
 }
 
 
+@media (width<=330px) {
+  #app{
+    left: 5%;
+    position: relative;
+    border: dashed red 2px;
+  }
+
+}
 
 
 header{
@@ -78,12 +88,15 @@ footer{
   margin-top: 5%;
 }
 
-
-
-@media (max-width:1100px) {
+@media (max-width: 600px), (min-width: 0px) {
   #app{
-    background-color: gray;
+    width: 90%;
   }
-
-
+  html{
+    width: 100%;
+  }
+  body{
+    width: 100%;
+  }
+  
 }

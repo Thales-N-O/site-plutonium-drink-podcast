@@ -30,7 +30,7 @@
 
     <section id="recently_released">
         <div class="lastestEpisodes">
-            <div class="epCount"><p>episódio 1</p>
+            <div class="epCount"><button>episódio 1</button>
                  <div class="data">24 Mar 2025</div>
                 </div>
             <div class="episodeCounterDc"><h3>Elementos Radioativos da Vida</h3>
@@ -40,7 +40,7 @@
 
         </div>
         <div class="lastestEpisodes">
-            <div class="epCount"><p>episódio 2</p>
+            <div class="epCount"><button>episódio 2</button>
                  <div class="data">24 Mar 2025</div>
                 </div>
             <div class="episodeCounterDc"><h3>Explosões de Realidade</h3>
@@ -50,7 +50,7 @@
 
         </div>
         <div class="lastestEpisodes">
-            <div class="epCount"><p>episódio 3</p>
+            <div class="epCount"><button>episódio 3</button>
                  <div class="data">24 Mar 2025</div>
                 </div>
             <div class="episodeCounterDc"><h3>Fórmula Secreta do Caos</h3>
@@ -174,16 +174,17 @@ box-shadow: 1px 4px 10px var(--shadow-Card-Box);
 .epCount{
   justify-content: space-between;
   font-weight: 600;
-  
   font-size: .8em;
   padding: 1em 2em .5em 2em;
     box-sizing: border-box;
-  &>p{
+  &>button{
+    cursor:pointer;
     border: var(--hover-Translucid-Violet-Color) 1px solid;
   border-radius: 1em;
   padding: .5% 6px;
   }
   &>.data{
+    cursor: pointer;
     color: var(--Time-Gray-Marker);
     font-weight: lighter;
   }
@@ -207,12 +208,24 @@ box-shadow: 1px 4px 10px var(--shadow-Card-Box);
     box-sizing: border-box;
   }
   &>button{color: var(--roxo-Anchor); background-color: transparent; display: flex; text-align: center; place-items: center ; gap: 6px;
-    padding: 1em 1em 2em 1em;
+    padding: 1em 2em;
+    border-radius: 2em;
     box-sizing: border-box;
+    &:hover{
+      transition: ease-out 6s !important;
+      background:linear-gradient(210deg,transparent,var(--side-Top-Color),transparent) ;
+      border: dashed red 1px;
+    }
   }
+
 }
 
-@media (width<=500px) {
+
+@media (width<=1145px) {
+  /* Seção do 90% */
+  .associedDc,.episode,#showBefore,.lastestEpisodes{
+    width: 90% !important;
+  }
   section{
       display: flex;
       flex-direction:column ;
@@ -222,6 +235,21 @@ box-shadow: 1px 4px 10px var(--shadow-Card-Box);
         padding: 2.5%;
       }
     }
-  
+    #standard{
+      gap: 2em;
+    }
+    .episode{
+    }
+    .associedDc{
+    }
+    #showBefore{
+      flex-direction: row;
+      justify-content: space-between !important;
+    }
+    #recently_released{
+      gap: 1em;
+    }
+    .lastestEpisodes{
+    }
 }
 </style>

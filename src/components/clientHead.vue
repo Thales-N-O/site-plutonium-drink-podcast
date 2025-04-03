@@ -148,15 +148,15 @@ nav{
 
 @media (max-width:560px) {
   header{
-    width: 90%	;
+    width: 80%	!important;
     /* //COSTUMIZAÇÃO DO LAYOUT GRID AREA SE MEXER PODE DAR MERDA// */
   grid-template-columns: 1fr 1fr 1fr; /* 3 colunas */
   grid-template-rows: 1fr 1fr 1fr 1fr; /* 4linhas */
   grid-template-areas: 
   ". clage ."
   ". title ."
-  ". play github "
-  ". paragraph linkedin"
+  ". paragraph github "
+  ". play linkedin"
   
   ;
     &>:nth-child(1){grid-area:clage ;}
@@ -184,5 +184,41 @@ nav{
   }
 
 }
+@media (width<=470px) {
+  header{
+    &>:nth-child(5),&>:nth-child(6){
+      position: relative;
+      right: 25%;
+      background-color: black;
+      &:hover{ background-color: blueviolet; }
+    }
+    &>:nth-child(5){
+      padding-top: 6%;
+      border-radius: 50%;
+    }
+    &>:nth-child(6){
+      border-radius: .5em;
 
+    }
+    &>:nth-child(2){
+      font-size:65% ;
+      position: relative;
+      left: 8%;
+    }
+    &>:nth-child(3){
+      width: 80%;
+      font-size:90% ;
+    }
+    &>:nth-child(4){
+      width: 45%;
+      gap: 1em;
+      padding: none;
+      position: relative;
+      right: 15%;
+    }
+    &>nav>button:nth-of-type(1){padding: .6em .5em; white-space: nowrap;font-size: x-small;}
+    &>nav>button:nth-of-type(2){padding: .6em .5em; white-space: nowrap;font-size: x-small;}
+
+  }
+  }
 </style>

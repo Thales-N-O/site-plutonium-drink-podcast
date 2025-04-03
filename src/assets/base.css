@@ -65,14 +65,15 @@ header,footer{
   color: white;
 }
 /* CLASSES DEPENDENTES DE:> DISPLAY GRIDS */
-#app,body,header,main,.latestEpisodes,.episode,.associedDc,#classific{
+#app,html,body,header,main,.latestEpisodes,.episode,.associedDc
+,#classific{
   display: grid;
 text-align: center;
-justify-content: center;
-place-items: center;
+justify-content: center !important;
+place-items: center !important;
 }
 /* NECESSITADOS DO:> DISPLAY FLEX */
-nav>button:nth-of-type(1),nav>button:nth-of-type(2),.starTitle,.epCount,.itcMin,section,.card,#cards,footer{
+nav>button:nth-of-type(1),nav>button:nth-of-type(2),.starTitle,.epCount,.itcMin,section,.cards,#cards,footer{
   display: flex;
   align-content: center;
   place-items: center;

@@ -12,13 +12,18 @@
 
 <div id="classific" class="debug">
 
-    <h1  class="debug">16+</h1>
+    <div><div><div><h1  class="debug">16+</h1></div></div></div>
 
 </div>
 </footer>
 </template>
 
 <script setup>
+
+
+
+
+
 </script>
 
 <style scoped>
@@ -35,6 +40,7 @@ footer{
     gap: 10%;
 }
 .cards{
+    font-weight: 500;
     white-space: nowrap;
     gap: 5%;
     padding: .8em;
@@ -42,15 +48,43 @@ footer{
     background-color: white;
     &:hover{background: var(--button-Translucid-Black-Color); color: white; }
       }
-#classific{
-    width: 55%;
+      #classific {
     height: 16vh;
-    /* padding: 4% 20%; */
-    box-sizing: border-box;
+    width: 55%;
+
+    & > div {
+        height: 75%;
+        width: 75%;
+        background-color: aliceblue;
+
+        & > div {
+            height: 60%;
+            width: 60%;
+            background-color: blue;
+
+            & > div {
+                height: 50%;
+                width: 50%;
+                background-color: black;
+
+                & > h1 {
+                    font-size: 2em;
+                    background: red;
+                }
+            }
+        }
+    }
 }
+
+          /*text-align: center;
+            background-color: purple;
+            border-radius: 50%;
+            padding: 26% 0%;
+            border: 1% solid black; */
+        
 menu{
 display:flex;
-gap: 4em;
+gap: 2em;
 flex-direction: column;
 
 
@@ -66,4 +100,84 @@ gap: 10%;
  }
     }   
         }
+@media (width<=1145px){
+    footer{
+        width: 80% !important;
+        flex-direction: column;
+    }
+    #cards{
+    width: auto;    
+    display: grid !important;
+    place-items: initial;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr .5fr;
+    grid-template-areas: 
+    "spot apple"
+    "goog ."
+    ;
+    &:nth-child(1){grid-area:spot ;}
+    &:nth-child(2){grid-area:apple ;}
+    &:nth-child(3){grid-area:goog ;}
+}
+.cards{
+    font-weight: 500;
+    white-space: nowrap;
+    gap: 5%;
+    padding: .8em;
+    background-color: white;
+    &:hover{background: var(--button-Translucid-Black-Color); color: white; }
+      }
+      #classific {
+    height: 6vh;
+    width: 55%;
+
+    & > div {
+        height: 75%;
+        width: 75%;
+        background-color: aliceblue;
+
+        & > div {
+            height: 60%;
+            width: 60%;
+            background-color: blue;
+
+            & > div {
+                height: 50%;
+                width: 50%;
+                background-color: black;
+
+                & > h1 {
+                    font-size: 2em;
+                    background: red;
+                }
+            }
+        }
+    }
+}
+
+          /*text-align: center;
+            background-color: purple;
+            border-radius: 50%;
+            padding: 26% 0%;
+            border: 1% solid black; */
+        
+menu{
+display:flex;
+gap: 2em;
+flex-direction: column;
+
+
+p{
+display: grid;
+
+gap: 5%;
+
+&>span{
+    font-size: 200%;
+    font-family: Inter;
+    font-weight: 400;
+ }
+    }   
+        }
+}
 </style>
