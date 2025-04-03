@@ -1,14 +1,20 @@
 <template>
-<footer>
+<footer class="debug">
+    <menu class="debug">
 <p id="merchandizer"><span>Não perca nenhum episódio!</span>
-<br>Assine nosso podcast em sua plataforma favorita e receba notificações quando lançarmos novos episódios.</p>
-<div id="cards">
-<button class="cards">Spotify   </button>
-<button class="cards">Apple Podcasts</button>
-<button class="cards">Google Podcasts</button>
+<br>Assine nosso podcast em sua plataforma favorita e receba notificações quando<br> lançarmos novos episódios.</p>
+<div id="cards" >
+<button class="cards"><i class="fa-brands fa-spotify"></i>Spotify   </button>
+<button class="cards"><i class="fa-brands fa-apple"></i>Apple Podcasts</button>
+<button class="cards"><i class="fa-brands fa-google"></i>Google Podcasts</button>
 </div>
+    </menu>
 
-<div id="classific"><h1 >16+</h1></div>
+<div id="classific" class="debug">
+
+    <h1  class="debug">16+</h1>
+
+</div>
 </footer>
 </template>
 
@@ -18,27 +24,46 @@
 <style scoped>
 footer{
     justify-content: space-between;
-    grid-template-columns: 60% 20%;
-    grid-template-rows: repeat(2, auto);
-    padding: 2em;
+    padding: 1.5em;
     box-sizing: border-box;
-    grid-template-areas: 
-    "merchandizer classific"
-    "cards classific"
-    ;
+   display: flex;
 }
 
-#merchandizer{text-align: start;  grid-area: merchandizer;}
+#merchandizer{text-align: start; }
 #cards{
-    grid-area:cards;
-    display: flex;
-    gap: 10em;
+    width: 75%;    
+    gap: 10%;
 }
 .cards{
+    white-space: nowrap;
+    gap: 5%;
     padding: .8em;
     box-sizing: border-box;
     background-color: white;
     &:hover{background: var(--button-Translucid-Black-Color); color: white; }
       }
-#classific{grid-area: classific;}
+#classific{
+    width: 55%;
+    height: 16vh;
+    /* padding: 4% 20%; */
+    box-sizing: border-box;
+}
+menu{
+display:flex;
+gap: 4em;
+flex-direction: column;
+
+
+p{
+display: grid;
+
+gap: 10%;
+
+&>span{
+    font-size: 200%;
+    font-family: Inter;
+    font-weight: 700;
+ }
+    }   
+        }
 </style>

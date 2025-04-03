@@ -4,16 +4,16 @@
     <section id="standard">
         <div class="episode">
             <i class="fa-solid fa-camera"></i>
-            <button>NOVO EPISÓDIO TODA SEGUNDA</button>
+            <button>{{ epFreq }}</button>
         </div>
         <div class="associedDc">
-            <h1>Sobre o Podcast</h1>
+            <h1>{{ aboutTitle }}</h1>
             <br>
-            <span><strong>Coquetel de Urânio</strong>
-            é um podcast que mistura o doce da nostalgia com o ácido da realidade adulta.</span>
+            <span><strong>{{ nameCited }}</strong>
+            {{ fistParagraph }}</span>
             <br>
-            <span>Como na receita das Meninas Superpoderosas, adicionamos um ingrediente extra à mistura — uma dose de humor ácido e linguagem sem filtro para discutir a vida como ela é.</span>
-            <span class="italic"><i>"Açúcar, tempero e tudo que há de bom. Estes foram os ingredientes escolhidos para criar as garotinhas perfeitas. Mas o professor Utônio, acidentalmente, acrescentou um ingrediente extra na mistura — O elemento X!"</i></span>
+            <span>{{ secnParagraph }}</span>
+            <span class="italic"><i>{{ italicPhrase }}</i></span>
         </div>
         
 
@@ -22,7 +22,7 @@
     
     <section id="showBefore">
     <h2>Episódios Recentes</h2>
-    <a target="_blank" href="https://kzmj4iocb22kqdqbyber.lite.vusercontent.net/">Ver todos</a>
+    <a target="_blank" href="{{ linkSeeAll }}">Ver todos</a>
     </section>
 
 
@@ -66,7 +66,28 @@
 </template>
 
 <script setup>
+import {ref} from "vue"
+const epFreq=ref('NOVO EPISÓDIO TODA SEGUNDA')
+const aboutTitle=ref('Sobre o Podcast')
+const nameCited=ref('Coquetel de Urânio')
+
+const fistParagraph=ref('é um podcast que mistura o doce da nostalgia com o ácido da realidade adulta.')
+const secnParagraph=ref('Como na receita das Meninas Superpoderosas, adicionamos um ingrediente extra à mistura — uma dose de humor ácido e linguagem sem filtro para discutir a vida como ela é.')
+const italicPhrase=ref('Açúcar, tempero e tudo que há de bom. Estes foram os ingredientes escolhidos para criar as garotinhas perfeitas. Mas o professor Utônio, acidentalmente, acrescentou um ingrediente extra na mistura — O elemento X!')
+const linkSeeAll=ref('https://kzmj4iocb22kqdqbyber.lite.vusercontent.net/')
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
 
 <style scoped>
 #standard{

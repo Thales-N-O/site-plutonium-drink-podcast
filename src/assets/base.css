@@ -15,8 +15,8 @@
 --footer-Second-Background:rgb(217, 39, 119);
 
 
---button-Green-Color:rgba(77, 222, 77, 0.929);
---button-Light-Green-Color-Hover:rgba(64, 194, 64, 0.929);
+--button-Green-Color:rgba(54, 190, 54, 0.929);
+--button-Light-Green-Color-Hover:rgba(114, 208, 114, 0.929);
 --button-Translucid-White-Color:rgba(255, 255, 255, .3);
 --button-Translucid-Black-Color:rgba(0, 0, 0, 0.563);
 --hover-Translucid-Violet-Color:rgba(147, 112, 216, 0.542);
@@ -36,10 +36,6 @@
 --side-Bottom-Color:rgb(228, 150, 192);
 }
 
-/* semantic color variables for this project */
-:root {
-
-}
 
 *{
   /* overflow-x: ; */
@@ -69,14 +65,14 @@ header,footer{
   color: white;
 }
 /* CLASSES DEPENDENTES DE:> DISPLAY GRIDS */
-#app,body,header,main,footer,.latestEpisodes,.episode,.associedDc{
+#app,body,header,main,.latestEpisodes,.episode,.associedDc,#classific{
   display: grid;
 text-align: center;
 justify-content: center;
 place-items: center;
 }
 /* NECESSITADOS DO:> DISPLAY FLEX */
-nav>button:nth-of-type(1),nav>button:nth-of-type(2),.starTitle,.epCount,.itcMin,section{
+nav>button:nth-of-type(1),nav>button:nth-of-type(2),.starTitle,.epCount,.itcMin,section,.card,#cards,footer{
   display: flex;
   align-content: center;
   place-items: center;

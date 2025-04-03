@@ -4,10 +4,10 @@
         <button>16+</button>
 
         <div class="starTitle">
-            <h1>Coquetel de Urânio</h1>
+            <h1>{{ title }}</h1>
         <img :src="sparkleIcon" alt="Sparkle" />
         </div>
-        <p>Açúcar, tempero e tudo que há de bom... mais um ingrediente extra na mistura!</p>
+        <p>{{subTitle}}</p>
 
             <nav>
 
@@ -37,7 +37,16 @@
 
 <script setup>
 import sparkleIcon from '@/assets/sparkle.svg';
+import {ref} from "vue"
+
+const title=ref("Coquetel de Urânio")
+
+const subTitle=ref('Açúcar, tempero e tudo que há de bom... mais um ingrediente extra na mistura!')
+
 </script>
+
+
+
 <style scoped>
 header{
 
