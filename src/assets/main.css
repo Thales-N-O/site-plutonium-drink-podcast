@@ -6,13 +6,11 @@ html{
     );
     background-attachment: fixed;
     height: fit-content;
-    border: dashed green 2px;
 }
 body{
   display: grid;
   align-items:center;
   justify-content: center;
-  border: dashed blue 2px;
 }
 
 
@@ -20,7 +18,6 @@ body{
   #app{
     left: 5%;
     position: relative;
-    border: dashed red 2px;
   }
 
 }

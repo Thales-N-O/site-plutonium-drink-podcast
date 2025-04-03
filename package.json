@@ -4,10 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-
-
     "predeploy": "npm run build",
-    "serve": "vite preview",    
+    "serve": "vite preview",
     "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",

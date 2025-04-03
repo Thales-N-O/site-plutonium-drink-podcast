@@ -14,7 +14,3 @@ app.use(router)
 app.mount('#app')
 javascript
 Copy
-const router = createRouter({
-  history: createWebHistory('/site-plutonium-drink-podcast/'),
-  // ...
-})
