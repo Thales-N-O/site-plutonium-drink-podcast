@@ -144,43 +144,43 @@ gap: 10%;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr .5fr;
     grid-template-areas: 
-    "spot apple"
+    "spotfy apple"
     "goog ."
     ;
-    &:nth-child(1){grid-area:spot ;}
+    &:nth-child(1){grid-area:spotfy ;}
     &:nth-child(2){grid-area:apple ;}
     &:nth-child(3){grid-area:goog ;}
-}
-.cards{
+
+    &>button{
     font-weight: 500;
-    white-space: nowrap;
+    
+    white-space: initial;
     gap: 5%;
     padding: .8em;
     background-color: white;
     &:hover{background: var(--button-Translucid-Black-Color); color: white; }
       }
+    }
       #classific {
-    height: 6vh;
-    width: 55%;
 
     & > div {
-        height: 75%;
-        width: 75%;
         background-color: aliceblue;
 
         & > div {
-            height: 60%;
-            width: 60%;
             background-color: blue;
 
             & > div {
-                height: 50%;
-                width: 50%;
                 background-color: black;
 
                 & > h1 {
-                    font-size: 2em;
+                    width: 2vw;
+                    height: 2vw;
+                    font-size: 1.6em;
                     background: red;
+                    justify-content: center !important;
+                    flex-direction: column !important;
+                    place-items: center !important;
+
                 }
             }
         }
@@ -211,5 +211,24 @@ gap: 5%;
  }
     }   
         }
+}
+@media (height<=560px){
+    footer{
+        width: 80% !important;
+        flex-direction: column;
+    }
+    #cards{
+    width: auto;    
+    display: grid !important;
+    place-items: initial;
+    gap: 1%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr .5fr;
+    &>button{
+        white-space: initial;
+    }
+    }
+  
+   
 }
 </style>

@@ -222,6 +222,7 @@ box-shadow: 1px 4px 10px var(--shadow-Card-Box);
 
 
 @media (width<=1145px) {
+
   /* Seção do 90% */
   .associedDc,.episode,#showBefore,.lastestEpisodes{
     width: 90% !important;
@@ -245,6 +246,7 @@ box-shadow: 1px 4px 10px var(--shadow-Card-Box);
     #showBefore{
       flex-direction: row;
       justify-content: space-between !important;
+      margin:70% 0% 20% 0%;
     }
     #recently_released{
       gap: 1em;

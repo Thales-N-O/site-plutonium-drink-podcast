@@ -208,6 +208,7 @@ nav{
     &>:nth-child(3){
       width: 80%;
       font-size:90% ;
+      
     }
     &>:nth-child(4){
       width: 45%;
@@ -220,5 +221,34 @@ nav{
     &>nav>button:nth-of-type(2){padding: .6em .5em; white-space: nowrap;font-size: x-small;}
 
   }
+  }
+  @media (height<=470px) {
+    header{
+      &>:nth-child(5),&>:nth-child(6){
+       
+      }
+      &>:nth-child(5){
+  
+      }
+      &>:nth-child(6){
+     
+
+      }
+      &>:nth-child(2){
+      
+      }
+      &>:nth-child(3){
+      
+        
+      }
+      &>:nth-child(4){
+      margin:33% 0% 20% 0%;
+        
+      }
+      &>nav>button:nth-of-type(1){padding: .6em .5em; white-space: nowrap;font-size: x-small;}
+      &>nav>button:nth-of-type(2){padding: .6em .5em; white-space: nowrap;font-size: x-small;}
+
+    }
+    
   }
 </style>
